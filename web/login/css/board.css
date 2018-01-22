@@ -1,0 +1,10 @@
+@CHARSET "utf-8";
+/*
+	index.jsp
+*/	
+
+/* 로그인 상자 상단 부 여백 설정 */
+.login-box{
+	margin-top : 150px;
+}
+
