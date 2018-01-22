@@ -9,3 +9,7 @@
 
 개인 프로젝트로 프로젝트 파일자체를 보관을 하였으나, gitHub를 통해서 언제든 접근하고 가볍게 clone을 받고자 repository를 생성해서 올리게됨.
 지금 코드를 보니, 열심히 했으나. 많이 미흡한 부분들이 보인다.(이 부분은 따로 개선하지는 않을거다.)
+
+
+- test video URL : https://www.youtube.com/watch?v=xgVNSzivNxc
+- project PPT URL : https://www.slideshare.net/nimbae/sds-unicase-ppt
