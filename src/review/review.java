@@ -32,8 +32,6 @@ public class review extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.println("review.credu 호출");
-
         int pagenum = 1;
         if (request.getParameter("Page_num") != null) {
             pagenum = Integer.parseInt(request.getParameter("Page_num"));

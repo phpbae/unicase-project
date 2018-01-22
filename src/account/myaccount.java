@@ -1,6 +1,6 @@
 package account;
 
-import bean.*;
+import bean.MemberBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,8 +16,8 @@ import java.io.IOException;
  */
 @WebServlet("/myaccount")
 public class myaccount extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+    private static final long serialVersionUID = 1L;
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -26,53 +26,30 @@ public class myaccount extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		System.out.println("myaccount.credu 호출");
-		
-		
-		//파라미터 한글처리
-		request.setCharacterEncoding("utf-8");
-		
-		
-		HttpSession session = request.getSession();
-		
-		//세션에 있는 회원정보를 가지고온다.
-		MemberBean bean =  (MemberBean) session.getAttribute("login");
-		
-		
-		// 포인트와 등급정보를 가지고 온다.
-		int user_points = bean.getUser_points();
-		int user_grade = bean.getUser_grade();
-		
-		
-		// 가지고온 정보를 set 해준다.
-		request.setAttribute("user_points", user_points);
-		request.setAttribute("user_grade", user_grade);
-		
-		
-		
-		
-		//Page 이동
-		String site = "myaccount.jsp";
-		RequestDispatcher dis = request.getRequestDispatcher(site);
-		dis.forward(request, response);
-		//포워딩
-		
-	
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        HttpSession session = request.getSession();
+        MemberBean bean = (MemberBean) session.getAttribute("login");
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+        int user_points = bean.getUser_points();
+        int user_grade = bean.getUser_grade();
+
+        request.setAttribute("user_points", user_points);
+        request.setAttribute("user_grade", user_grade);
+
+        String site = "myaccount.jsp";
+        RequestDispatcher dis = request.getRequestDispatcher(site);
+        dis.forward(request, response);
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
 
 }
