@@ -11,5 +11,5 @@
 지금 코드를 보니, 열심히 했으나. 많이 미흡한 부분들이 보인다.(이 부분은 따로 개선하지는 않을거다.)
 
 
-- test video URL : https://www.youtube.com/watch?v=xgVNSzivNxc
+- test video URL : https://youtu.be/rnZVdN8F6s8
 - project PPT URL : https://www.slideshare.net/nimbae/sds-unicase-ppt
